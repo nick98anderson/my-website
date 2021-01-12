@@ -1,11 +1,14 @@
 import React from 'react'
 import '../About.css'
-
+import {motion} from 'framer-motion'
 
 
 function About() {
     return(
-        <div className="about-container">
+        <motion.div exit={{opacity: 0}} 
+        animate={{opacity:1}} 
+        initial={{opacity: 0}}  
+        className="about-container">
             <div className="about-body">
             <h1><u>About</u></h1>
                 <p>
@@ -36,7 +39,7 @@ function About() {
                 .
                 </p>
             </div>
-      </div>
+      </motion.div>
     )
 }
 
